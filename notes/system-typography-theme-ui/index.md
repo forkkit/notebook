@@ -1,12 +1,8 @@
-import Demo from './demo'
+import ThemeDemo from './theme-demo'
 
-import Nope from './nope'
-
-# System Typography with Theme UI
+# System Typography + Theme UI
 
 Takes the idea behind `@styled-system/typography` and merges it with `theme-ui`
 
-<Demo />
+<ThemeDemo />
 
-
-<Nope />
