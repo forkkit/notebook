@@ -1,0 +1,23 @@
+{
+  "private": true,
+  "name": "@jxnblk/notebook",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "gatsby develop",
+    "build": "gatsby build"
+  },
+  "workspaces": [
+    "notes/*"
+  ],
+  "author": "Brent Jackson <jxnblk@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "gatsby": "^2.3.15",
+    "gatsby-theme-digital-garden": "0.0.15",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "reakit": "^0.16.0",
+    "reakit-theme-default": "^0.2.0"
+  }
+}
