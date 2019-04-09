@@ -1,0 +1,42 @@
+
+# Theme Composition Visualization
+
+- theme config as a component
+
+- Themes: Gatsby config
+  - MDXBlog: Data Source/abstraction Theme
+  - MDXDocs: Data Source/abstraction Theme
+  - GatsbyBlogTheme: A style theme
+  - GatsbyDocsTheme: A style theme
+
+- Where does data go?
+
+```jsx
+<Themes>
+  <MDXBlog
+    src='src/posts'
+    path='/blog'>
+    <GatsbyBlogTheme>
+      <GatsbyBlogTheme.Index />
+      <GatsbyBlogTheme.Post />
+    </GatsbyBlogTheme>
+  </MDXBlog>
+  <MDXDocs
+    src='docs'
+    path='/docs'>
+    <GatsbyDocsTheme.Index />
+    <GatsbyDocsTheme.Doc />
+  </MDXDocs>
+</Themes>
+```
+
+```jsx
+<Themes>
+  <MDXSource />
+  <SomeCMSSource />
+  <MDXBlog>
+    <Blog.Index path='/blog' />
+    <Blog.Post path='/blog' />
+  </MDXBlog>
+</Themes>
+```

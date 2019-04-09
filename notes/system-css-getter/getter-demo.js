@@ -21,7 +21,7 @@ const css = style => props => {
 }
 
 const get = (strings = [], ...expressions) => theme => {
-  console.log('get', strings, expressions, theme)
+  // console.log('get', strings, expressions, theme)
   if (typeof strings === 'string') return _get(theme, strings, ...expressions)
   const result = [ strings[0] ]
   expressions.forEach((exp, i) => {

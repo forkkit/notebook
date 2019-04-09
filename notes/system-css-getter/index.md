@@ -4,6 +4,8 @@ import GetterDemo from './getter-demo'
 
 <GetterDemo />
 
+API proposal
+
 ```jsx
 <div
   css={css({

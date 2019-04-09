@@ -1,0 +1,73 @@
+import NavBar from './bar.mdx'
+
+# Theme Blocks
+
+Using theme-ui to replicate some of the ideas in mdx-blocks
+
+End User API
+
+```mdx
+import Bar from 'theme-ui/blocks'
+
+export default Bar.props({
+  color: 'white',
+  bg: 'black',
+})
+
+[Home](/)
+
+- [Docs](#)
+- [About](#)
+- [Sign Up](# 'button')
+```
+
+## Demo
+
+<NavBar />
+
+This navbar is created with the `Bar` component and content is in [`./bar.mdx`](bar)
+
+## The Core Block Component
+
+```jsx
+import React from 'react'
+import { ThemeProvider } from 'theme-ui'
+import { Box } from 'theme-ui/layout'
+import merge from 'lodash.merge'
+
+export const Block = ({
+  components,
+  theme,
+  styles,
+  ...props
+}) =>
+  <ThemeProvider
+    components={components}
+    theme={merge({}, theme, {
+      styles
+    })}>
+    <Box data-block {...props} />
+  </ThemeProvider>
+```
+
+## Creating a Block
+
+```jsx
+import React from 'react'
+import { Block } from 'theme-ui/blocks'
+
+export default props =>
+  <Block
+    {...props}
+    css={{
+      // root element styles, i.e. this Block
+    }}
+    styles={{
+      // child element styles
+    }}
+    theme={{
+      // optional theme overrides
+    }}
+  />
+```
+
