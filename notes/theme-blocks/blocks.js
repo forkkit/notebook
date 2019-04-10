@@ -97,7 +97,6 @@ const FlexList = props =>
   />
 
 export const Footer = props =>
-  console.log('footer', props) ||
   <Block
     {...props}
     components={{

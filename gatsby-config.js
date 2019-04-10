@@ -9,7 +9,7 @@ module.exports = {
       resolve: 'gatsby-theme-digital-garden',
       options: {
         mdxLayouts: {
-          default: path.resolve('./src/layout')
+          default: path.resolve('./src/layout'),
         }
       }
     }

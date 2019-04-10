@@ -10440,6 +10440,19 @@ theme-ui@^0.0.0-6:
     styled-system "^4.1.0"
     typography "^0.16.19"
 
+theme-ui@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/theme-ui/-/theme-ui-0.0.2.tgz#99a8afa5aac40f811cb0c27a67a73d74ac2fbf10"
+  integrity sha512-+wViH+PvNLYPxwltIejTfEvTFODG1CARbdvowp0M/UjA47mbsrAyYE/Pc6J+XEnj4UesY1z/dUmqcyI+b0RKnw==
+  dependencies:
+    "@styled-system/css" "^1.0.3"
+    css-what "^2.1.3"
+    jest-emotion "^10.0.10"
+    lodash.get "^4.4.2"
+    lodash.merge "^4.6.1"
+    styled-system "^4.1.0"
+    typography "^0.16.19"
+
 through2@^2.0.0, through2@^2.0.1:
   version "2.0.5"
   resolved "https://registry.yarnpkg.com/through2/-/through2-2.0.5.tgz#01c1e39eb31d07cb7d03a96a70823260b23132cd"
