@@ -1,9 +1,18 @@
+const path = require('path')
+
 module.exports = {
   siteMetadata: {
     title: 'Notebook',
   },
   __experimentalThemes: [
-    'gatsby-theme-digital-garden',
+    {
+      resolve: 'gatsby-theme-digital-garden',
+      options: {
+        mdxLayouts: {
+          default: path.resolve('./src/layout')
+        }
+      }
+    }
   ],
   plugins: [
     'gatsby-plugin-catch-links',

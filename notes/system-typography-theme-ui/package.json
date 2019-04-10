@@ -5,6 +5,9 @@
   "author": "Brent Jackson <jxnblk@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "@styled-system/typography": "^1.0.0-9",
+    "lodash.mapkeys": "^4.6.0",
+    "react-helmet": "^5.2.0",
     "theme-ui": "^0.0.0-6"
   }
 }
