@@ -1,5 +1,5 @@
 import React from 'react'
-import { ThemeProvider } from 'theme-ui'
+import { ThemeProvider, css } from 'theme-ui'
 import { Box } from 'theme-ui/layout'
 import merge from 'lodash.merge'
 
@@ -67,3 +67,43 @@ export const Bar = props =>
   />
 
 Bar.props = toFunction(Bar)
+
+const NavLink = props =>
+  <a
+    {...props}
+    css={css({
+      display: 'inline-block',
+      fontWeight: 'bold',
+      color: 'inherit',
+      textDecoration: 'none',
+      p: 3,
+      '&:hover': {
+        color: 'primary',
+      }
+    })}
+  />
+
+const FlexList = props =>
+  <ul
+    {...props}
+    css={css({
+      listStyle: 'none',
+      display: 'flex',
+      flexWrap: 'wrap',
+      alignItems: 'center',
+      m: 0,
+      p: 0,
+    })}
+  />
+
+export const Footer = props =>
+  console.log('footer', props) ||
+  <Block
+    {...props}
+    components={{
+      a: NavLink,
+      ul: FlexList,
+    }}
+  />
+
+Footer.props = toFunction(Footer)
