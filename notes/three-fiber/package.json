@@ -1,0 +1,11 @@
+{
+  "name": "three-fiber",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Brent Jackson <jxnblk@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "react-three-fiber": "^2.0.4",
+    "three": "^0.103.0"
+  }
+}

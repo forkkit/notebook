@@ -1,0 +1,63 @@
+
+# Handling Layouts in Themes
+
+- Composable API
+- Import layout primitives for adding content
+- Import pre-configured page layouts
+  - How does content get populated?
+    - Site Metadata/GraphQL
+    - Theme config
+    - Shadowing
+    - None of these options are very "React-like"
+- Styles should be completely customizable/easy to override
+- Users will almost *always* have to override and change parts of the layout
+- How do you provide component kits for things like landing pages?
+
+```
+themes/
+  data-blog
+  data-docs
+  data-deck
+  system/
+    layout
+      header
+      footer
+      sidebar
+      container
+```
+
+A layout component like the one below could be what the end-user API looks like for a theme's layout.
+The imported components could have default styles and handle styling of child content like links.
+
+```jsx
+// example custom layout
+import React from 'react'
+import { Link } from 'gatsby'
+import {
+  Layout,
+  Header,
+  Main,
+  Container,
+  Footer
+} from 'theme-components'
+
+export default props =>
+  <Layout>
+    <Header>
+      <Link to='/'>Home</Link>
+      <Link to='/blog'>Blog</Link>
+      <Link to='/notes'>Notes</Link>
+      <Link to='/about'>About</Link>
+    </Header>
+    <Main>
+      <Container>
+        {props.children}
+      </Container>
+    </Main>
+    <Footer>
+      © 2019
+    </Footer>
+  </Layout>
+```
+
+This is a very composable API, but what about a really zero-config solution?
