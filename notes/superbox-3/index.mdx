@@ -1,0 +1,51 @@
+import Box from './index'
+
+# Superbox 3
+
+Prototype
+
+<Box
+  px={4}
+  py={5}
+  fontSize={32}
+  bg='tomato'
+  borderRadius={8}
+  {...{
+    '&:hover': {
+      bg: 'magenta',
+    }
+  }}>
+  Superbox
+</Box>
+
+```jsx
+<Box
+  px={4}
+  py={5}
+  fontSize={32}
+  bg='tomato'
+  borderRadius={8}
+  {...{
+    '&:hover': {
+      bg: 'magenta',
+    }
+  }}>
+  Superbox
+</Box>
+```
+
+```jsx
+// alternative syntax
+<Box {...{
+  px: 4,
+  py: 5,
+  fontSize: 32,
+  bg: 'tomato',
+  borderRadius: 8,
+  '&:hover': {
+    bg: 'magenta',
+  },
+}}>
+  Superbox
+</Box>
+```
