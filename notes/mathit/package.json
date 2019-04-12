@@ -1,0 +1,13 @@
+{
+  "name": "mathit",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Brent Jackson <jxnblk@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "ava"
+  },
+  "devDependencies": {
+    "ava": "^1.4.1"
+  }
+}
