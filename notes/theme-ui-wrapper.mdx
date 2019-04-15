@@ -1,0 +1,26 @@
+
+# Theme UI Wrapper
+
+- How should root-level styles be handled in theme-ui
+- Use cases:
+  - typography.js styles
+  - base typography and color styles
+- Where MDX wrapper falls short
+  - non-MDX pages/content - anything in a React comonent will not have styles
+  - MDX components with a custom wrapper or default export
+  - Using a component for this explicit case is more intentional
+- Should the default Layout component pick this up?
+- Should there be a separate Typography component?
+- Should the root styles be exposed so that *any* component can use these?
+  - This could mean exposing the `themed` utility
+- It could be an additional Styled component
+- Possible component names:
+  - Layout
+  - Typography
+  - Root
+  - Styles
+  - Base
+  - BaseStyles
+  - RootStyles
+  - Styled.base
+  - Styled.root
