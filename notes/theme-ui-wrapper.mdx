@@ -26,3 +26,50 @@
   - Styled.base
   - Styled.root
 - Any styles coming from a theme should probably be scoped to a component
+
+## Shadowing Layouts
+
+```
+layout/
+  index.js
+  header.js
+  footer.js
+```
+
+```jsx
+// layout/index.js
+// handles basic styles
+import React from 'react'
+import Header from './header'
+import Footer from './footer'
+
+// styled components...
+
+export default props =>
+  <Layout>
+    <Layout.Header>
+      <Header />
+    </Layout.Header>
+    <Layout.Main>
+      {props.children}
+    </Layout.Main>
+    <Layout.Footer>
+      <Footer />
+    </Layout.Footer>
+  </Layout>
+```
+
+```jsx
+// layout/header.js
+// unstyled content - easy to shadow
+import React from 'react'
+import { Link } from 'gatsby'
+
+export default props =>
+  <>
+    <Link to='/'>Home</Link>
+    <br />
+    <Link to='/blog'>Blog</Link>
+    <Link to='/about'>About</Link>
+  </>
+```
