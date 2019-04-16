@@ -1,0 +1,10 @@
+{
+  "name": "fluid-text",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Brent Jackson <jxnblk@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "resize-observer-polyfill": "^1.5.1"
+  }
+}
