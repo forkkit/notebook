@@ -53,3 +53,37 @@
   </MDXBlog>
 </Themes>
 ```
+
+## File Based Tree
+
+A directory tree-like view could help show what themes add
+
+```
+src/
+  pages/
+    index.js
+themes/
+  gatsby-theme-blog/
+    components/
+      post.js
+      posts.js
+    templates/
+      post.js
+      posts.js
+```
+
+Side-by-side version: could use colors to show which modules are and aren't shadowed
+
+```
+# user site                 | themes
+src/
+  pages/
+    index.js
+  gastby-theme-blog/          gatsby-theme-blog/
+    components/                 components/
+      post.js                     post.js
+  gastby-theme-portfolio/     gatsby-theme-portfolio/
+    components/                 components/
+      project.js                  project.js
+```
+
