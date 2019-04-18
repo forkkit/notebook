@@ -8,6 +8,7 @@ module.exports = {
     {
       resolve: 'gatsby-theme-digital-garden',
       options: {
+        notesPath: '/',
         mdxLayouts: {
           default: path.resolve('./src/layout'),
         }
