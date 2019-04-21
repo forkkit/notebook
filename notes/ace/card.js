@@ -1,23 +1,8 @@
 import React from 'react'
 import Ace from './ace'
 
-export default ({
-  size = 256,
-}) =>
-<svg
-  viewBox='0 0 64 64'
-  width={size}
-  height={size}
->
+const defs = (
   <defs>
-    <filter id='shadow'>
-      <feDropShadow
-        dx={0}
-        dy={1}
-        stdDeviation={1}
-        opacity={0.25}
-      />
-    </filter>
     <filter id="dropshadow" height="150%">
       <feGaussianBlur
         in="SourceAlpha"
@@ -33,10 +18,23 @@ export default ({
       </feMerge>
     </filter>
   </defs>
+)
+
+export default ({
+  size = 256,
+  ...props
+}) =>
+<svg
+  viewBox='0 0 64 64'
+  {...props}
+  width={size}
+  height={size}
+>
+  {defs}
   <rect
-    x={8}
+    x={10}
     y={2}
-    width={48}
+    width={44}
     height={60}
     rx={2}
     ry={2}
@@ -45,13 +43,7 @@ export default ({
       filter: 'url(#dropshadow)'
     }}
   />
-  {/*
-  <Ace
-    x={20}
-    y={18}
-    size={24}
-  />
-  */}
+  {/* <Ace x={20} y={18} size={24} /> */}
   <Ace
     x={16}
     y={16}
