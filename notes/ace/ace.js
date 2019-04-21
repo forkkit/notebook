@@ -70,13 +70,14 @@ const Face = props =>
 export default ({
   size = 128,
   color = '#000',
+  ...props
 }) =>
 <svg
+  {...props}
   viewBox='0 0 32 32'
   width={size}
   height={size}
   fill={color}>
-  {false && <rect fill='tomato' width='32' height='32' />}
   <path d={paths.spade} />
   <path d={paths.handle} />
   <Face />
