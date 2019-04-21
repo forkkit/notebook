@@ -14,7 +14,22 @@ const polygon = ({
       center + radius * Math.sin(radians(angle) + i * (2 * Math.PI / sides))
     ])
 
+const flipX = ({
+  points = [],
+  center = 16,
+}) => {
+  const flip = n => n < center
+    ? center + (center - n)
+    : center - (n - center)
+  const flipped = points.map((x, y) => [
+    flip(x),
+    y,
+  ])
+  return flipped
+}
+
 module.exports = {
   radians,
   polygon,
+  flipX,
 }
