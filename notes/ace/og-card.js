@@ -9,6 +9,6 @@ export default props =>
   >
     <rect fill='#fff' width='128' height='64' />
     <Card
-      viewBox='0 0 256 256'
-      x={32} y={0} />
+      viewBox='0 0 288 288'
+      x={36} y={3} />
   </svg>

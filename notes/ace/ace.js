@@ -68,7 +68,7 @@ const Face = props =>
   </g>
 
 export default ({
-  size = 128,
+  size = 256,
   color = '#000',
   ...props
 }) =>
