@@ -53,7 +53,7 @@ const Face = props =>
       strokeLinecap='round'
       strokeWidth={1/2}
     />
-    <g fill='red' opacity={0}>
+    <g fill='red' opacity={0.5}>
       <circle
         r={1.5}
         cx={10}
