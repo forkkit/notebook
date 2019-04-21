@@ -1,23 +1,45 @@
 import React from 'react'
-import { polygon, flipX } from 'mathit'
+import { polygon } from 'mathit'
+
+const flip = n => n > 16
+  ? 16 - (n - 16)
+  : 16 + (16 - n)
 
 const paths = {
   leftEye: [
-    'M', 13, 12,
-    'A', 1, 2, 0, 0, 0, 13, 16,
-    'A', 1, 2, 0, 0, 0, 13, 12,
+    'M', 14, 11,
+    'A', 1, 1.5, 0, 0, 0, 14, 14,
+    'A', 1, 1.5, 0, 0, 0, 14, 11,
     'z'
   ].join(' '),
   rightEye: [
-    'M', 19, 12,
-    'A', 1, 2, 0, 0, 0, 19, 16,
-    'A', 1, 2, 0, 0, 0, 19, 12,
+    'M', 18, 11,
+    'A', 1, 1.5, 0, 0, 0, 18, 14,
+    'A', 1, 1.5, 0, 0, 0, 18, 11,
     'z'
   ].join(' '),
   mouth: [
-    'M', 18, 19,
-    'A', 2, 2, 0, 0, 1, 14, 19,
+    'M', 18, 17,
+    'A', 2, 2, 0, 0, 1, 14, 17,
   ].join(' '),
+  spade: [
+    'M', 16, 0,
+    'C', 13, 1, 0, 12, 0, 20,
+    'C', 0, 28, 6, 28, 8, 28,
+    'C', 13, 28, 16, 24, 16, 24,
+    // right
+    'C', 16, 24, flip(13), 28, flip(8), 28,
+    'C', flip(8), 28, flip(0), 28, flip(0), 20,
+    'C', flip(0), 12, flip(13), 1, 16, 0,
+    'z',
+  ].join(' '),
+  handle: [
+    'M', 15, 24,
+    'L', 17, 24,
+    'L', 19, 32,
+    'L', 13, 32,
+    'z',
+  ].join(' ')
 }
 
 const Face = props =>
@@ -29,34 +51,33 @@ const Face = props =>
       fill='none'
       stroke='white'
       strokeLinecap='round'
+      strokeWidth={1/2}
     />
-    <g fill='pink' opacity={1/2}>
+    <g fill='red' opacity={0}>
       <circle
-        r={1}
-        cx={9}
-        cy={18}
+        r={1.5}
+        cx={10}
+        cy={16}
       />
       <circle
-        r={1}
-        cx={23}
-        cy={18}
+        r={1.5}
+        cx={22}
+        cy={16}
       />
     </g>
   </g>
 
 export default ({
   size = 128,
-  color = 'currentcolor',
+  color = '#000',
 }) =>
 <svg
   viewBox='0 0 32 32'
   width={size}
   height={size}
   fill={color}>
-  <rect
-    fill='#111'
-    width='32'
-    height='32'
-  />
+  {false && <rect fill='tomato' width='32' height='32' />}
+  <path d={paths.spade} />
+  <path d={paths.handle} />
   <Face />
 </svg>
