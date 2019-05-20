@@ -1,0 +1,16 @@
+
+# Theme UI Context Composition
+
+## Requirements
+
+- Each theme can provide its own context
+- Composed themes merge context when needed (when tho?)
+- End-user can override *all* other contexts
+- Should have a fool-proof API that hides the implementation details
+
+## Example
+
+- A site uses gatsby-theme-blog & gatsby-theme-notes
+- Each theme has it's own theme context
+- The site has it's own `src/theme.js` file that overrides some, not all, of the values
+

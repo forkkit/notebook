@@ -1,0 +1,34 @@
+
+# Style APIs
+
+## Theme Transforms
+
+```js
+import { css, get, rx } from '@styled-system/theme-transformer'
+
+const theme = {
+  colors: {
+    primary: 'tomato',
+    secondary: 'gold',
+  },
+  css,
+  get,
+  rx
+}
+
+<div
+  css={t => t.css({
+    color: t.get('colors.primary'),
+    bg: 'gold',
+    width: t.rx([ '100%', '50%', })
+  })}
+/>
+```
+
+```html
+<!-- 2s with html/css -->
+<div
+  data-col='12,6,3'
+  data-fs='12'
+>
+```
