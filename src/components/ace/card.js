@@ -1,5 +1,5 @@
 import React from 'react'
-import Ace from './ace'
+import Ace from './index'
 
 const defs = (
   <defs>
