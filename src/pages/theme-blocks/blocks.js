@@ -106,3 +106,5 @@ export const Footer = props =>
   />
 
 Footer.props = toFunction(Footer)
+
+export default props => false

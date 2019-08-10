@@ -1,5 +1,5 @@
 import React from 'react'
-import { polygon } from 'mathit'
+import { polygon } from '../mathit'
 
 const flip = n => n > 16
   ? 16 - (n - 16)

@@ -4,18 +4,9 @@ module.exports = {
   siteMetadata: {
     title: 'Notebook',
   },
-  __experimentalThemes: [
-    {
-      resolve: 'gatsby-theme-digital-garden',
-      options: {
-        notesPath: '/',
-        mdxLayouts: {
-          default: path.resolve('./src/layout'),
-        }
-      }
-    }
-  ],
   plugins: [
+    'gatsby-plugin-mdx',
+    'gatsby-plugin-theme-ui',
     'gatsby-plugin-catch-links',
     {
       resolve: 'gatsby-plugin-google-fonts',
